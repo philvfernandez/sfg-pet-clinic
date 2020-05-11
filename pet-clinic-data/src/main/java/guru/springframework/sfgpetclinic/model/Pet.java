@@ -32,5 +32,5 @@ public class Pet extends BaseEntity{
 
     //Good habit to initialize visit set so it will never be null.
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
-    private Set<Visit> vists = new HashSet<>();
+    private Set<Visit> visits = new HashSet<>();
 }
