@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OwnerMapServiceTest {
 
     OwnerMapService ownerMapService;
-    final Long ownerId = 1L;
+    final Long ownerId = 1l;
     final String lastName = "Fernandez";
 
     @BeforeEach

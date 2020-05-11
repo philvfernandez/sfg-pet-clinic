@@ -75,7 +75,7 @@ class OwnerSDJpaServiceTest {
     void findById() {
         when(ownerRepository.findById(anyLong())).thenReturn(Optional.of(returnOwner));
 
-        Owner owner = sdJpaService.findById(1L);
+        Owner owner = sdJpaService.findById(1l);
 
         assertNotNull(owner);
     }
@@ -84,7 +84,7 @@ class OwnerSDJpaServiceTest {
     void findByIdNotFound() {
         when(ownerRepository.findById(anyLong())).thenReturn(Optional.empty());
 
-        Owner owner = sdJpaService.findById(1L);
+        Owner owner = sdJpaService.findById(1l);
 
         assertNull(owner);
     }
@@ -92,7 +92,7 @@ class OwnerSDJpaServiceTest {
 
     @Test
     void save() {
-        Owner ownerToSave = Owner.builder().id(1L).build();
+        Owner ownerToSave = Owner.builder().id(1l).build();
 
         when(ownerRepository.save(ownerToSave)).thenReturn(returnOwner);
 
@@ -112,7 +112,7 @@ class OwnerSDJpaServiceTest {
 
     @Test
     void deleteById() {
-        sdJpaService.deleteById(1L);
+        sdJpaService.deleteById(1l);
         verify(ownerRepository).deleteById(anyLong());
     }
 }
