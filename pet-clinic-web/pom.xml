@@ -131,11 +131,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <!-- latest version (2.20.1) does not work well with JUnit5 -->
-                <version>2.22.0</version> <!-- 2.19.1 -->
-            </plugin>
         </plugins>
     </build>
 </project>
